@@ -101,6 +101,4 @@ Find top 10 countries within each country top 5 cities within each city top 5 zi
 | US      | Houston       | 77061   | 15100   | 
 
 
-### Question
-
 
