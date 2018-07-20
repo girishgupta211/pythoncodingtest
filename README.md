@@ -13,7 +13,6 @@ This will setup all the required python environment
 # Instructions
 * Clone this repository on your laptop
 * If you have questions about understanding the data call Abhishek at: 88798-19351 or Kesav at: 81058-80624
-* Submit a pull request with all of your code
 
 ## Exercise: Processing reservations file for analytical purposes
 
