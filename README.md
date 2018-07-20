@@ -10,6 +10,10 @@ The laptop has necessary python modules installed.  To use proper python environ
 
 This will setup all the required python environment
 
+# Instructions
+* Clone this repository on your laptop
+* If you have questions about understanding the data call Abhishek at: 88798-19351 or Kesav at: 81058-80624
+* Submit a pull request with all of your code
 
 ## Exercise: Processing reservations file for analytical purposes
 
@@ -32,7 +36,7 @@ Key Columns for analysis are:
 * Departure - Guest departure date
 * RateCategory - Rate category code
 * Room Revenue - Room rate for a given stay night
-* Block ID - Non zero indicates reservations are part of block.
+* Block ID - Non zero indicates reservations are part of Block.
 * Guest ID - Guest ID
 * GstCity - Guest City code
 * GstZip - Guest ZIP code
@@ -40,17 +44,22 @@ Key Columns for analysis are:
 
 Each reservation is repeated for staynight as a separate row.  Example if a reservation is for 2 nights the file will contain 2 repeated rows one for each staynight.
 
----
-> For all the questions below ignore cancelled reservations (Status == 'C')
 
-> All the repeated reservations need to be combined into one single reservation with Room Revenue added up
+---
+> For all questions below ignore cancelled reservations (Status == 'C')
 
 > All top reservations are sorted based on revenue unless specified differently 
 ---
 
-### Question
+### Question 0
 
-Find top 10 paying customers excluding block reservations.  Output should display as follows:
+Generate a new csv file (excluding all cancelations) with all the columns as in the input .csv file by combining all repeated reservations into one row representing a reservation. In this csv the Room Revenue column should have the Room Revenue which is the sum of the Room Revenue for all of the Stay Nights for that reservation. 
+
+> For all future questions, use the newly generated output/csv file as the input. (Remember this should exclude all cancelled reservations and the Room Revenue column now represents the revenue for the entire reservation; and there is only one row per reservation)
+
+### Question 1
+
+Find top 10 paying customers excluding Blocks. (remember non-Blocks have a Block ID of 0).  Output should display as follows:
 
 | Guest ID | FirstName | LastName | Revenue | 
 |----------|-----------|----------|---------| 
@@ -58,7 +67,7 @@ Find top 10 paying customers excluding block reservations.  Output should displa
 | 1235     | Test      | User2    | 2020.25 | 
 
 
-### Question
+### Question 2
 
 Find top 10 block reservations (Block ID > 0) based on number of staynights.  Output should display as follows:
 
@@ -67,16 +76,14 @@ Find top 10 block reservations (Block ID > 0) based on number of staynights.  Ou
 | 1234     | 200         | 
 | 1235     | 100         | 
 
-### Question
+### Question 3
 
 Find top 10 reservations which have long booking window.
 
-> Bookingwindow = Number of days (Arrival - BookTime)
+> Booking Window = Arrival - BookTime (This will be a number of days)
 
 
-
-
-### Question
+### Question 4
 
 Find top 10 countries within each country top 5 cities within each city top 5 zipcodes.  Output should display the following:
 
